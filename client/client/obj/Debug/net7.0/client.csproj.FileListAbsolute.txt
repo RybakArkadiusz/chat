@@ -1,0 +1,17 @@
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/client
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/client.deps.json
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/client.runtimeconfig.json
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/client.dll
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/client.pdb
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.csproj.AssemblyReference.cache
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.AssemblyInfoInputs.cache
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.AssemblyInfo.cs
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.csproj.CoreCompileInputs.cache
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.csproj.CopyComplete
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.dll
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/refint/client.dll
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.pdb
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/client.genruntimeconfig.cache
+/Users/arkadiuszrybak/Documents/GitHub/chat/client/client/obj/Debug/net7.0/ref/client.dll
