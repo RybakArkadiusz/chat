@@ -13,7 +13,7 @@ public class Menu
 
     public void setIsLogged(bool isLogged)
     {
-        this.isLogged = this.isLogged;
+        this.isLogged = isLogged;
     }
 
     public string run()

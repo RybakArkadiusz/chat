@@ -32,7 +32,13 @@ namespace client
                 int rec = _clientSocket.Receive(receivedBuffer);
                 byte[] data = new byte[rec];
                 Array.Copy(receivedBuffer,data,rec);
-                Console.WriteLine("Received: "+Encoding.ASCII.GetString(receivedBuffer));
+                string received = Encoding.ASCII.GetString(receivedBuffer).Trim();
+                Console.WriteLine("Received: "+received);
+
+                if (received.IndexOf("loggedin")>=0)
+                {
+                    menu.setIsLogged(true);
+                }
             }
         }
 

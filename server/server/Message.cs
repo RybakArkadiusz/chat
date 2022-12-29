@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using server.messages;
 
 namespace server
@@ -7,9 +8,9 @@ namespace server
     public class Message
     {
         public MessageType Type { get; set; }
-        public object Data { get; set; }
+        public Dictionary<string,string> Data { get; set; }
 
-        public Message(MessageType type, object data)
+        public Message(MessageType type, Dictionary<string,string> data)
         {
             Type = type;
             Data = data;
@@ -19,12 +20,14 @@ namespace server
         {
             switch (Type)
             {
+               
                 case MessageType.Login:
-                    return JsonConvert.DeserializeObject<LoginData>(Data.ToString());
+                    LoginData loginData = new LoginData(Data["username"],Data["password"]);
+                    return loginData;
                     break;
                     
                 default:
-                    return new LoginData();
+                    return new LoginData(null,null);
                     break;
                 
             }

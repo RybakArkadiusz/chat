@@ -55,8 +55,16 @@ namespace server
             datas dta = message.convertToData();
             try
             {
-                string nickname = dta.execute();
-                response = "logged in!";
+                if (dta is LoginData)
+                {
+                    string nickname = dta.execute();
+                    _namesOfClients.Add(nickname,socket);
+                }
+                else
+                {
+                    dta.execute();
+                }
+                response = "loggedin";
             }
             catch (Exception e)
             {
