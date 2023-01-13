@@ -4,10 +4,12 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
+
 namespace client
 {
     class clientProgram
     {
+        public static string Nickname { get; set; }
         private static Socket _clientSocket =
             new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         
@@ -35,12 +37,15 @@ namespace client
                 string received = Encoding.ASCII.GetString(receivedBuffer).Trim();
                 Console.WriteLine("Received: "+received);
 
-                if (received.IndexOf("loggedin")>=0)
+                if (received.IndexOf("nickname: ")>=0)
                 {
                     menu.setIsLogged(true);
+                    Nickname = received.Substring(10);
                 }
             }
         }
+
+        
 
         public static void LoopConnect()
         {

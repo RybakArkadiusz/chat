@@ -6,7 +6,7 @@ public class LoginData : datas
     private string password { get; set; }
 
 
-    public LoginData(string username, string password)
+    public LoginData(string username, string password,string nickname = "")
     {
         this.username = username;
         this.password = password;
@@ -32,7 +32,6 @@ public class LoginData : datas
             else
             {
                 throw new Exception("Incorrect password");
-                return string.Empty;
             }
         }
         

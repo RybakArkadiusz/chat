@@ -12,7 +12,7 @@ namespace server
     {
         private static byte[] _buffer = new byte[1024];
         private static List<Socket> _clientSockets = new List<Socket>();
-        private static Dictionary<string, Socket> _namesOfClients = new Dictionary<string, Socket>();
+        public static Dictionary<string, Socket> _namesOfClients = new Dictionary<string, Socket>();
 
         private static Socket _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         static void Main(string[] args)
@@ -59,12 +59,12 @@ namespace server
                 {
                     string nickname = dta.execute();
                     _namesOfClients.Add(nickname,socket);
+                    response = "nickname: "+nickname;
                 }
                 else
                 {
                     dta.execute();
                 }
-                response = "loggedin";
             }
             catch (Exception e)
             {

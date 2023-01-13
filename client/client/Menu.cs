@@ -63,7 +63,7 @@ public class Menu
                     return GetConversations();
                     break;
                 case "2":
-                    
+                    return CreateConversation();
                     break;
                 default:
                     return run();
@@ -112,7 +112,8 @@ public class Menu
         string? content = Console.ReadLine();
 
         Message CreateConversationMessage = new Message(MessageType.CreateConversation,
-            new { nickname = addresseesNickname, content = content });
+            new { receiverNickname = addresseesNickname,senderNickname = clientProgram.Nickname
+                .Replace("\u0000", String.Empty).Trim(), content = content });
         return CreateConversationMessage.ToJson();
     }
 }

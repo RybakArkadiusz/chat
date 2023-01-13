@@ -22,10 +22,17 @@ namespace server
             {
                
                 case MessageType.Login:
-                    LoginData loginData = new LoginData(Data["username"],Data["password"]);
-                    return loginData;
+                    LoginData login = new LoginData(Data["username"],Data["password"]);
+                    return login;
                     break;
-                    
+                case MessageType.CreateAccount:
+                    SignInData createAcc = new SignInData(Data["username"],Data["password"],Data["nickname"]);
+                    return createAcc;
+                    break;
+                case MessageType.CreateConversation:
+                    NewMessageData newMessage = new NewMessageData(Data["receiverNickname"],Data["senderNickname"], Data["content"]);
+                    return newMessage;
+                    break;
                 default:
                     return new LoginData(null,null);
                     break;
